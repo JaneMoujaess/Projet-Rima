@@ -1,0 +1,88 @@
+<div
+  class="flex min-h-full flex-col justify-center px-6 py-16 lg:px-8 bg-sky-100"
+>
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="average">
+        Average Grade
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="average"
+        type="number"
+        placeholder="0"
+        [(ngModel)]="average"
+        name="average"
+      />
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2"> Grades </label>
+      <div>
+        <label class="block">
+          <span class="sr-only">Choose profile photo</span>
+          <input
+            type="file"
+            multiple
+            (change)="onGradesChange($event)"
+            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-400 hover:file:bg-blue-100"
+          />
+        </label>
+      </div>
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2"> CV </label>
+      <div>
+        <label class="block">
+          <input
+            type="file"
+            (change)="onCVChange($event)"
+            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-400 hover:file:bg-blue-100"
+          />
+        </label>
+      </div>
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2">
+        Motivation Letter
+      </label>
+      <div>
+        <label class="block">
+          <input
+            type="file"
+            (change)="onMLChange($event)"
+            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-400 hover:file:bg-blue-100"
+          />
+        </label>
+      </div>
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2">
+        Recommendation Letter
+      </label>
+      <div>
+        <label class="block">
+          <input
+            type="file"
+            (change)="onRLChange($event)"
+            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-400 hover:file:bg-blue-100"
+          />
+        </label>
+      </div>
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2">
+        Programs
+      </label>
+      <app-table></app-table>
+    </div>
+    <div class="flex justify-center">
+      <button
+        (click)="submit()"
+        class="bg-blue-400 hover:bg-blue-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="button"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
