@@ -1,0 +1,3 @@
+<div *ngIf="params.value.data" class="flex flex-col space-y-2"><ng-container *ngFor="let param of params.value.data">
+    <a [href]="param.attributes.url" target="_blank">{{param.attributes.name}}</a>
+</ng-container></div>
