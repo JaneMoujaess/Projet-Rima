@@ -2,15 +2,12 @@
   <ag-grid-angular
     [rowData]="rowData"
     [columnDefs]="colDefs"
-    style="height: 500px"
+    domLayout="autoHeight"
+    style="height: 80vh"
+    [autoSizeStrategy]="autoSizeStrategy"
+    [pagination]="true"
+    (gridReady)="onGridReady($event)"
+    #agGrid
   >
   </ag-grid-angular>
-  <!-- <ag-grid-angular
-    [rowModelType]="'serverSide'"
-    style="height: 500px"
-    [columnDefs]="columnDefs"
-    [defaultColDef]="defaultColDef"
-    [rowData]="rowData"
-    (gridReady)="onGridReady($event)"
-  ></ag-grid-angular> -->
 </div>
