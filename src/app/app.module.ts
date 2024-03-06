@@ -10,6 +10,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { FormsModule } from '@angular/forms';
+import { LinkCellRendererComponent } from './components/link-cell-renderer/link-cell-renderer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     TableComponent,
     ApplicationFormComponent,
+    LinkCellRendererComponent
   ],
   imports: [
     BrowserModule,
