@@ -1,0 +1,13 @@
+<div class="ag-theme-quartz">
+  <ag-grid-angular
+    [rowData]="rowData"
+    [columnDefs]="colDefs"
+    domLayout="autoHeight"
+    style="height: 80vh"
+    [autoSizeStrategy]="autoSizeStrategy"
+    [pagination]="true"
+    (gridReady)="onGridReady($event)"
+    #agGrid
+  >
+  </ag-grid-angular>
+</div>

@@ -23,5 +23,9 @@ export class UserServiceService {
     const token = this.getToken();
     return token ? jwtDecode(token) : null;
   }
+
+  getPrograms() : Observable<any>{
+    return this.http.get('http://localhost:1337/api/programs?populate[university]=*&populate[recruitment]=*&populate[scholarships]=*&populate[language_test]=*')
+  }
 }
 
