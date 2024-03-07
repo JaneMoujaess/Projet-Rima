@@ -73,7 +73,7 @@
       <label class="block text-gray-700 text-sm font-bold mb-2">
         Programs
       </label>
-      <app-porgrams-table></app-porgrams-table>
+      <app-porgrams-table (emit)="getProgramId($event)"></app-porgrams-table>
     </div>
     <div class="flex justify-center">
       <button

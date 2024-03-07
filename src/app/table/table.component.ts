@@ -50,7 +50,7 @@ export class TableComponent implements OnInit{
   colDefs: ColDef[] = [
     { field: 'attributes.average', headerName:'Average',filter:'agNumberColumnFilter', sortable:true },
     { field: 'attributes.grades', headerName:'Grades', cellRenderer : LinkCellRendererComponent, autoHeight:true},
-    { field: 'attributes.cv', headerName:'CV' },
+    { field: 'attributes.cv', headerName:'CV', cellRenderer : LinkCellRendererObjectComponent, autoHeight:true },
     {field:'attributes.motivation_letter', headerName:'Motivation Letter', cellRenderer : LinkCellRendererObjectComponent, autoHeight:true},
     {field:'attributes.recommendation_letter', headerName:'Recommendation Letter', cellRenderer : LinkCellRendererObjectComponent, autoHeight:true},
     {field:'attributes.program.data.attributes.type', headerName:'Type', filter:'agTextColumnFilter',sortable:true },

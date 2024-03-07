@@ -6,8 +6,10 @@
     style="height: 80vh"
     [autoSizeStrategy]="autoSizeStrategy"
     [pagination]="true"
+    [rowSelection]="'single'"
     (gridReady)="onGridReady($event)"
     #agGrid
+    (selectionChanged)="onRowSelectionChanged($event)"
   >
   </ag-grid-angular>
 </div>
